@@ -1,0 +1,17 @@
+<div class="create-recipe-form card shadow  p-3 my-3 mt-md-0 ">
+    <div class="form-group">
+        <label for="recipe-name">name</label>
+        <input type="text" id="recipe-name" [(ngModel)]="name" class="form-control" placeholder="" aria-describedby="helpId">
+    </div>
+    <div class="form-group">
+        <label for="recipe-description">description</label>
+        <input type="text" id="recipe-description" [(ngModel)]="description" class="form-control" placeholder="" aria-describedby="helpId">
+    </div>
+    <div class="form-group">
+        <label for="recipe-image">image url </label>
+        <input type="text" id="recipe-image" [(ngModel)]="image" class="form-control" placeholder="" aria-describedby="helpId">
+    </div>
+    <div class="mt-3 d-flex justify-content-end">
+        <button class="btn btn-success" (click)="addRecipe()"> add recipe</button>
+    </div>
+</div>

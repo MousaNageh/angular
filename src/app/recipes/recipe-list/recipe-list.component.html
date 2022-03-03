@@ -1,0 +1,15 @@
+<div class="recipes">
+    <div class="row">
+        <div class="col-md-6">
+            <app-recipe-form (emittedRecipe)="addRecipe($event)"></app-recipe-form>
+            <ul class="list-group recipes-list">
+                <li class="list-group-item recipe-item " *ngFor="let recipe of recipes;let id = index;" (click)="showRecipe(id)">
+                    <app-item [recipe]="recipe"></app-item>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 " *ngIf="recipe&&selectedRecipeId !=undefined">
+            <app-recipe-detail (AmountVal)="getAmount($event)" [recipe]="recipe" [recipeId]="selectedRecipeId"></app-recipe-detail>
+        </div>
+    </div>
+</div>
